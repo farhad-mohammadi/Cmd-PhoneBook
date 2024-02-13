@@ -139,6 +139,7 @@ class Phonebook:
         for i, c in enumerate(self.contacts):
             contacts += f"[{'*' if self.selected_contact == i else ''}{i + 1}] {c.__str__()}\n"
         return contacts
+    @property
     def length(self):
         """Returns the number of contacts in the phonebook.
 

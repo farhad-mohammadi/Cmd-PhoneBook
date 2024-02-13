@@ -15,7 +15,7 @@ def main():
     clear_screen()
     my_phonebook.selected_contact = None
     print(my_phonebook)
-    length = my_phonebook.length()
+    length = my_phonebook.length
     for i, menu_item in enumerate(main_menu.keys()):
         option = f'[{i + 1}] {menu_item}'
         if length == 0 and menu_item == 'Select':
@@ -48,7 +48,7 @@ def select():
     if my_phonebook.selected_contact is None:
         print(my_phonebook.select_str()) 
         num = ''
-        while not num.isdigit()or int(num) < 1 or int(num) > my_phonebook.length():
+        while not num.isdigit()or int(num) < 1 or int(num) > my_phonebook.length:
             num = input('Please enter the number of one of the contacts:')
         num = int(num) - 1
         my_phonebook.selected_contact = num
